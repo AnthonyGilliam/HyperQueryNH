@@ -1,0 +1,15 @@
+#Solution Files
+*.suo
+*.user
+TestResults/
+
+#Build Files
+*.dll
+*.pdb
+bin/
+Debug/
+obj/
+
+#Resharper
+/_Resharper*
+/_UpgradeReport*

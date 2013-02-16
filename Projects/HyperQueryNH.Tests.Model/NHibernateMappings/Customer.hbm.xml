@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping
+   xmlns="urn:nhibernate-mapping-2.2"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   assembly="HyperQueryNH.Tests.Model"
+   namespace="HyperQueryNH.Tests.Model"
+   default-lazy="true"
+   default-access="property"
+>
+
+	<class name="Customer" table="tblCustomers">
+		<id name="ID" column="CustomerID" unsaved-value="00000000-0000-0000-0000-000000000000">
+			<generator class="guid" />
+		</id>
+
+		<property name="DateOfCreation" column="DateOfCreation" type="DateTime" not-null="true" />
+		<property name="FirstName" column="FirstName" type="String" length="50" not-null="true" />
+		<property name="MiddleInitial" column="MiddleInitial" type="Char" />
+		<property name="LastName" column="LastName" type="String" length="50" not-null="true" />
+		<property name="WebAddress" column="WebAddress" type="String" length="100" />
+		<property name="Email" column="Email" type="String" length="80" not-null="true" />
+		<property name="Establishment" column="Establishment" type="String" length="100" />
+		<property name="CustomerDiscount" column="CustomerDiscount" type="Decimal" />
+		<property name="DateSubscribed" column="DateSubscribed" type="DateTime" not-null="true" />
+		<!--
+		public virtual Address Address { get; set; }
+		public virtual IList<Order> Orders { get; set; }
+		-->
+	</class>
+</hibernate-mapping>
+	
