@@ -2,6 +2,7 @@
 *.suo
 *.user
 TestResults/
+_UpgradeReport*/
 
 #Build Files
 *.dll
@@ -11,5 +12,4 @@ Debug/
 obj/
 
 #Resharper
-/_Resharper*
-/_UpgradeReport*
+_Resharper*/
