@@ -3,7 +3,7 @@
 	<session-factory>
 		<property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
 		<property name="dialect">NHibernate.Dialect.MsSqlCeDialect</property>
-		<property name="connection.driver_class">NHibernate.Driver.SqlServerCeDriver</property>
+		<property name="connection.driver_class">NHibernate.Driver.SqlServerCeDriver</property> <!--TODO: Find proper NHibernate SqlCe driver to make tests pass-->
 		<property name="connection.connection_string">Data Source=HyperQueryNH_Tests.sdf</property>
 		<property name="show_sql">true</property>
 	</session-factory>
