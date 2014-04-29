@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using NHibernate;
 using NHibernate.Linq;
+using NHibernate.Criterion;
 
 namespace HyperQueryNH.Core
 {
@@ -124,6 +125,15 @@ namespace HyperQueryNH.Core
             //Disconnect();
 
             return obj;
+        }
+
+        public long GetCount<TDomainObject>() where TDomainObject : class
+        {
+            Session.Reconnect();
+
+            return Session.CreateCriteria<TDomainObject>()
+                .SetProjection(Projections.RowCount())
+                .UniqueResult<int>();
         }
 
         public IList<TDomainObject> GetAll<TDomainObject>()

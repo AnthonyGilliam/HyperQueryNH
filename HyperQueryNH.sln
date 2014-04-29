@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperQueryNH.Core", "Projects\HyperQueryNH.Core\HyperQueryNH.Core.csproj", "{677692A8-D212-413A-A636-89C0CB30FE34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperQueryNH.Repositories", "Projects\HyperQueryNH.Repositories\HyperQueryNH.Repositories.csproj", "{3C47A30F-1E8D-4830-9DEB-D6AAB853D3B3}"

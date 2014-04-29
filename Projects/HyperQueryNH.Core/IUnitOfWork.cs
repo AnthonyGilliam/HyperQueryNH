@@ -22,7 +22,8 @@ namespace HyperQueryNH.Core
         TDomainObject GetFirst<TDomainObject>(Expression<Func<TDomainObject, bool>> queryExpression
             , Expression<Func<TDomainObject, string>> sortExpression
             , bool ascending);
-        
+
+        long GetCount<TDomainObject>() where TDomainObject : class;
         IList<TDomainObject> GetAll<TDomainObject>();
         IList<TDomainObject> GetAll<TDomainObject>(int skip, int take);
         IList<TDomainObject> GetAll<TDomainObject>(Expression<Func<TDomainObject, bool>> queryExpression);

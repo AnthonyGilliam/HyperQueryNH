@@ -1,8 +1,10 @@
 #Solution Files
 *.suo
 *.user
+UpgradeLog*
 TestResults/
 _UpgradeReport*/
+Backup/
 
 #Build Files
 *.dll
