@@ -127,13 +127,41 @@ namespace HyperQueryNH.Core
             return obj;
         }
 
-        public long GetCount<TDomainObject>() where TDomainObject : class
+        public int GetCount<TDomainObject>() where TDomainObject : class
         {
-            Session.Reconnect();
+            Reconnect();
 
             return Session.CreateCriteria<TDomainObject>()
                 .SetProjection(Projections.RowCount())
                 .UniqueResult<int>();
+        }
+
+        public TDomainObject GetRandom<TDomainObject>() where TDomainObject : class
+        {
+            Reconnect();
+
+            var rowcount = GetCount<TDomainObject>();
+            var randomIndex = new Random().Next(rowcount - 1);
+
+            return Session.Query<TDomainObject>()
+                .Skip(randomIndex)
+                .First();
+        }
+
+        public TDomainObject GetRandom<TDomainObject>(Expression<Func<TDomainObject, bool>> queryExpression) where TDomainObject : class
+        {
+            Reconnect();
+
+            var rowcount = Session.Query<TDomainObject>()
+                .Where(queryExpression)
+                .Count() - 1;
+
+            var randomIndex = new Random().Next(rowcount - 1);
+
+            return Session.Query<TDomainObject>()
+                .Where(queryExpression)
+                .Skip(randomIndex)
+                .First();
         }
 
         public IList<TDomainObject> GetAll<TDomainObject>()

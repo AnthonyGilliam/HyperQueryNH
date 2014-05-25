@@ -23,7 +23,10 @@ namespace HyperQueryNH.Core
             , Expression<Func<TDomainObject, string>> sortExpression
             , bool ascending);
 
-        long GetCount<TDomainObject>() where TDomainObject : class;
+        int GetCount<TDomainObject>() where TDomainObject : class;
+        TDomainObject GetRandom<TDomainObject>(Expression<Func<TDomainObject, bool>> queryExpression) where TDomainObject : class;
+        TDomainObject GetRandom<TDomainObject>() where TDomainObject : class;
+
         IList<TDomainObject> GetAll<TDomainObject>();
         IList<TDomainObject> GetAll<TDomainObject>(int skip, int take);
         IList<TDomainObject> GetAll<TDomainObject>(Expression<Func<TDomainObject, bool>> queryExpression);
