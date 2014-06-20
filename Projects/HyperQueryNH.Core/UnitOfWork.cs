@@ -141,6 +141,13 @@ namespace HyperQueryNH.Core
             Reconnect();
 
             var rowcount = GetCount<TDomainObject>();
+
+            if (rowcount < 0)
+                return null;
+
+            if (rowcount == 0)
+                return Session.Query<TDomainObject>().FirstOrDefault();
+            
             var randomIndex = new Random().Next(rowcount - 1);
 
             return Session.Query<TDomainObject>()
@@ -155,6 +162,15 @@ namespace HyperQueryNH.Core
             var rowcount = Session.Query<TDomainObject>()
                 .Where(queryExpression)
                 .Count() - 1;
+
+            if (rowcount < 0)
+                return null;
+
+            if (rowcount == 0)
+            {
+                return Session.Query<TDomainObject>()
+                    .FirstOrDefault(queryExpression);
+            }
 
             var randomIndex = new Random().Next(rowcount - 1);
 
