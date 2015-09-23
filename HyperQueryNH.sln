@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperQueryNH.Core", "Projects\HyperQueryNH.Core\HyperQueryNH.Core.csproj", "{677692A8-D212-413A-A636-89C0CB30FE34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperQueryNH.Repositories", "Projects\HyperQueryNH.Repositories\HyperQueryNH.Repositories.csproj", "{3C47A30F-1E8D-4830-9DEB-D6AAB853D3B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperQueryNH.Tests.Web", "Projects\HyperQueryNH.Tests.Web\HyperQueryNH.Tests.Web.csproj", "{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyperQueryNH.Tests.Desktop", "Projects\HyperQueryNH.Tests.Desktop\HyperQueryNH.Tests.Desktop.csproj", "{9E29E578-0587-4A97-A7C9-1A9540204547}"
 EndProject
@@ -34,12 +32,6 @@ Global
 		{3C47A30F-1E8D-4830-9DEB-D6AAB853D3B3}.IntegrationTests|Any CPU.Build.0 = Release|Any CPU
 		{3C47A30F-1E8D-4830-9DEB-D6AAB853D3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C47A30F-1E8D-4830-9DEB-D6AAB853D3B3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}.IntegrationTests|Any CPU.ActiveCfg = Release|Any CPU
-		{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}.IntegrationTests|Any CPU.Build.0 = Release|Any CPU
-		{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6CFF01E-4F49-4C0A-A3D6-61FB8F251B09}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9E29E578-0587-4A97-A7C9-1A9540204547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E29E578-0587-4A97-A7C9-1A9540204547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E29E578-0587-4A97-A7C9-1A9540204547}.IntegrationTests|Any CPU.ActiveCfg = Release|Any CPU
